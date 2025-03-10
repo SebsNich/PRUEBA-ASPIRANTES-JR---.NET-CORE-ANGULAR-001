@@ -1,0 +1,27 @@
+<!-- src/app/asignar-pelicula-sala/asignar-pelicula-sala.component.html -->
+
+<div class="container">
+    <h2>Asignar Película a Sala</h2>
+  
+    <form>
+      <!-- Selección de película -->
+      <div class="mb-3">
+        <label for="pelicula" class="form-label">Película</label>
+        <select class="form-select" [(ngModel)]="seleccionPelicula" name="pelicula" id="pelicula" required>
+          <option *ngFor="let pelicula of peliculas" [value]="pelicula.id">{{ pelicula.nombre }}</option>
+        </select>
+      </div>
+  
+      <!-- Selección de sala -->
+      <div class="mb-3">
+        <label for="sala" class="form-label">Sala</label>
+        <select class="form-select" [(ngModel)]="seleccionSala" name="sala" id="sala" required>
+          <option *ngFor="let sala of salas" [value]="sala.id">{{ sala.nombre }}</option>
+        </select>
+      </div>
+  
+      <!-- Botón de asignación -->
+      <button type="submit" class="btn btn-primary">Asignar</button>
+    </form>
+  </div>
+  

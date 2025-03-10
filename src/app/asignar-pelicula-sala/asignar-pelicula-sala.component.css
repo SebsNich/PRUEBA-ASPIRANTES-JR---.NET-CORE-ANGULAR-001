@@ -1,0 +1,9 @@
+/* src/app/asignar-pelicula-sala/asignar-pelicula-sala.component.css */
+.form-select {
+    width: 100%;
+    margin: 10px 0;
+  }
+  button {
+    margin-top: 20px;
+  }
+  
