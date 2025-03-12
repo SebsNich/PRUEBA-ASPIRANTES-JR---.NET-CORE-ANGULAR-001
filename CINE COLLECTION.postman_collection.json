@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "dad70824-a16a-42c7-8632-540f25dce770",
+		"name": "CINE COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42380913"
+	},
+	"item": [
+		{
+			"name": "CRUD Pelicula",
+			"item": [
+				{
+					"name": "Consulta de Peliculas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/Pelicula",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"Pelicula"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro de Pelicula",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"DareDevil\",\r\n  \"duracion\": 180\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/Pelicula",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"Pelicula"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Pelicula",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idPelicula\": 8,\r\n  \"nombre\": \"DareDevil 2\",\r\n  \"duracion\": 185\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/Pelicula",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"Pelicula"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Pelicula por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/Pelicula/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"Pelicula",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar pelicula",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/Pelicula/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"Pelicula",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD PeliculaSalaCine",
+			"item": [
+				{
+					"name": "Consultar Pelicula en Sala de Cine",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/PeliculaSalaCine",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"PeliculaSalaCine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asignacion de Pelicula a Sala",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n  \"fechaPublicacion\": \"2025-03-12T20:35:09.391Z\",\r\n  \"fechaFin\": \"2025-03-12T20:35:09.391Z\",\r\n  \"pelicula\": {\r\n\r\n    \"nombre\": \"Endgame\",\r\n    \"duracion\": 180\r\n  },\r\n  \"salaCine\": {\r\n    \"nombre\": \"Sala 1\",\r\n    \"estado\": true\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/PeliculaSalaCine",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"PeliculaSalaCine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Pelicula en Sala de Cine",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7089/api/PeliculaSalaCine/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"PeliculaSalaCine",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Pelicula en Sala de Cine",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idPeliculaSala\": 5,\r\n  \"idPelicula\": 10,\r\n  \"idSalaCine\": 9,\r\n  \"fechaPublicacion\": \"2025-03-12T20:41:20.217Z\",\r\n  \"fechaFin\": \"2025-03-12T20:41:20.217Z\",\r\n  \"pelicula\": {\r\n    \"nombre\": \"Endgame\",\r\n    \"duracion\": 180\r\n  },\r\n  \"salaCine\": {\r\n    \"nombre\": \"Sala 2\",\r\n    \"estado\": true\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/PeliculaSalaCine/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"PeliculaSalaCine",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Pelicula en Sala de Cine",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/PeliculaSalaCine/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"PeliculaSalaCine",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD SalaCine",
+			"item": [
+				{
+					"name": "Consulta de Salas de Cine",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/SalaCine",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"SalaCine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro de Sala de Cine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Imax\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/SalaCine",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"SalaCine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Sala de Cine por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/SalaCine/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"SalaCine",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Sala de Cine",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idSala\": 11,\r\n  \"nombre\": \"Imax\",\r\n  \"estado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/SalaCine/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"SalaCine",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Sala de Cine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7089/api/SalaCine/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"SalaCine",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
